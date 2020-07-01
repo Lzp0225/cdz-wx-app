@@ -1,0 +1,16 @@
+.tab-bar {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 96rpx;
+    background: white;
+    display: flex;
+    align-items: center;
+}
+.tab-bar-item {
+    flex: 1;
+    text-align: center;
+    font-size: 20rpx;
+}

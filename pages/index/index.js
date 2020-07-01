@@ -15,7 +15,11 @@ Page({
       url: '../logs/logs'
     })
   },
-  onLoad: function () {
+  onLoad () {
+
+    app.locationReadyCallback = res => {
+      console.log('经纬度', app.globalData.location)
+    }
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
@@ -50,5 +54,5 @@ Page({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
-  }
+  },
 })

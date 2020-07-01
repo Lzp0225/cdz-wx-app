@@ -29,11 +29,23 @@ App({
               }
             }
           })
+         wx.getLocation({
+           type: 'gcj02',
+           success: res => {
+             console.log(res)
+             this.globalData.location = Object.assign({}, { latitude: res.latitude, longitude: res.longitude })
+             if (this.locationReadyCallback) {
+               this.locationReadyCallback(res)
+             }
+           }
+         })
         }
       }
     })
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    location: null,
+    is_charging: false
   }
 })
