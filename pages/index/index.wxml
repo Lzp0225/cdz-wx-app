@@ -1,13 +1,18 @@
 <!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
+<view class="home-container">
+  <scroll-view
+          class="scroll-view"
+          refresher-enabled
+          refresher-background="#ff6900"
+          refresher-triggered="{{triggered}}"
+          bindrefresherpulling="onRefresh"
+  >
+    <view class="swiper-container">
+      <swiper class="swiper" indicator-dots indicator-color="#000" indicator-active-color="#ff6900" >
+        <swiper-item wx:for="{{images}}" wx:key="index">
+          <cover-image class="cover-image" src="{{item}}"></cover-image>
+        </swiper-item>
+      </swiper>
+    </view>
+  </scroll-view>
 </view>

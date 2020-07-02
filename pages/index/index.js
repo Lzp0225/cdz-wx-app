@@ -7,7 +7,9 @@ Page({
     motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    triggered: true,
+    images: ['https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1590579300027&di=8e1b58b59ee641f6f3d32d5a57afd85d&imgtype=0&src=http%3A%2F%2Fku.90sjimg.com%2Fback_pic%2F03%2F69%2F59%2F4757b51fd157e65.jpg%2521%2Fwatermark%2Ftext%2FOTDorr7orqE%3D%2Ffont%2Fsimkai%2Falign%2Fsoutheast%2Fopacity%2F20%2Fsize%2F50', 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1590579300027&di=8e1b58b59ee641f6f3d32d5a57afd85d&imgtype=0&src=http%3A%2F%2Fku.90sjimg.com%2Fback_pic%2F03%2F69%2F59%2F4757b51fd157e65.jpg%2521%2Fwatermark%2Ftext%2FOTDorr7orqE%3D%2Ffont%2Fsimkai%2Falign%2Fsoutheast%2Fopacity%2F20%2Fsize%2F50']
   },
   //事件处理函数
   bindViewTap: function() {
@@ -55,4 +57,11 @@ Page({
       hasUserInfo: true
     })
   },
+  onRefresh() {
+    setTimeout(()=> {
+      this.setData({
+        triggered: false
+      })
+    }, 2000)
+  }
 })

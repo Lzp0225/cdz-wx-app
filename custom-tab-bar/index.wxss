@@ -8,9 +8,34 @@
     background: white;
     display: flex;
     align-items: center;
+    border-top: 1px solid #bbb;
+}
+.tab-bar-selected {
+    color: #ff6900;
 }
 .tab-bar-item {
+    display: flex;
     flex: 1;
-    text-align: center;
+    height: 96rpx;
     font-size: 20rpx;
+    position: relative;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 4rpx;
+}
+.scan-code-bar {
+    width: 96rpx;
+    height: 96rpx;
+    border-radius: 50%;
+    background-color: #ff6900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    position: absolute;
+    z-index: 10;
+    top: -48rpx;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 5px
 }

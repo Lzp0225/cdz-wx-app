@@ -1,0 +1,21 @@
+<!-- camera.wxml -->
+<camera class="camera" mode="scanCode" device-position="back" model:flash="{{flash}}" bindscancode="scanCodeHandle" binderror="error">
+    <view class="top">
+
+    </view>
+    <view class="middle">
+        <view class="left"></view>
+        <view class="center"></view>
+        <view class="right"></view>
+    </view>
+    <view class="bottom">
+        <view class="handle-button">
+            <button class="live-pusher" bindtap="openLivePusher">打开手电筒</button>
+            <button class="live-pusher" bindtap="openLivePusher">打开手电筒</button>
+        </view>
+    </view>
+
+</camera>
+<!--<button type="primary" bindtap="takePhoto">拍照</button>-->
+<!--<view>预览</view>-->
+<image mode="widthFix" src="{{src}}"></image>

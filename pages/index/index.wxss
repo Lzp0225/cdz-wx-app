@@ -1,4 +1,28 @@
 /**index.wxss**/
+.home-container {
+  height: calc(100vh - 96rpx);
+}
+.scroll-view {
+  height: 100%;
+}
+.swiper-container {
+  height: 252rpx;
+  padding: 20rpx 32rpx 0;
+  position: relative;
+  overflow: hidden;
+  top: -2rpx;
+}
+.swiper-container::after {
+  content: "";
+  width: 140%;
+  height: 160rpx;
+  position: absolute;
+  left: -20%;
+  top: 0;
+  z-index: -1;
+  border-radius: 0 0 50% 50%;
+  background-color: #ff6900
+}
 .userinfo {
   display: flex;
   flex-direction: column;
@@ -18,4 +42,13 @@
 
 .usermotto {
   margin-top: 200px;
+}
+.swiper {
+  width: 100%;
+  height: 228rpx;
+  border-radius: 16rpx;
+  overflow: hidden;
+}
+.cover-image {
+  border-radius: 16rpx;
 }

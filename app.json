@@ -2,14 +2,14 @@
   "pages": [
     "pages/index/index",
     "pages/logs/logs",
-    "pages/map/index"
+    "pages/map/index",
+    "pages/camera/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#ff6900",
     "navigationBarTitleText": "首页",
-    "navigationBarTextStyle": "white",
-    "navigationStyle": "custom"
+    "navigationBarTextStyle": "white"
   },
   "tabBar": {
     "custom": true,
@@ -23,8 +23,11 @@
     }, {
       "pagePath": "pages/map/index",
       "text": "地图"
-
-    }]
+    },
+      {
+        "pagePath": "pages/map/index",
+        "text": "地图"
+      }]
   },
   "sitemapLocation": "sitemap.json"
 }

@@ -1,5 +1,9 @@
 <!-- map.wxml -->
-<map id="myMap" show-location />
+<view>
+    <navigator></navigator>
+    <map id="myMap" show-location />
+</view>
+
 
 <!--<button type="primary" bindtap="getCenterLocation">获取位置</button>-->
 <!--<button type="primary" bindtap="moveToLocation">移动位置</button>-->

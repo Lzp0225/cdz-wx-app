@@ -1,3 +1,6 @@
 <view class="tab-bar">
-    <view class="tab-bar-item" bindtap="switchTab" wx:for="{{list}}" wx:key="index" data-index="{{index}}" data-path="{{item.pagePath}}">{{ item.text }}</view>
+    <view class="tab-bar-item {{index === selected?'tab-bar-selected': ''}}" bindtap="switchTab" wx:for="{{list}}" wx:key="index" data-index="{{index}}" data-path="{{item.pagePath}}">
+        {{ item.text }}
+    </view>
+    <navigator url="/pages/camera/index" class="scan-code-bar">扫码</navigator>
 </view>
